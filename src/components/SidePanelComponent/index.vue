@@ -28,9 +28,9 @@
       
       <v-list-tile class="mini-nav-bar">
         <v-list-tile-content>
-          <ul class="nav navbar-right">
+          <ul class="mini-nav navbar-right">
             <li v-for="(item, i) in miniNavList" :key="i">
-                <a href="#">
+                <a href="#" class="mini-nav-link">
                   <p style="display: inline;">{{item}}</p>
                 </a>
             </li>
@@ -195,7 +195,7 @@ export default {
   z-index: 1000;
 }
 
-.nav {
+.mini-nav {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -210,12 +210,12 @@ li {
   text-align: center;
   padding-left: 12px;
 }
-.nav > li > a {
+.mini-nav> li > a {
   text-decoration: none;
   color: #747A8A;
   padding-bottom: 10px;
 }
-.nav > li > a:hover, a:focus {
+.mini-nav-link:hover {
   font-weight: bold;
   color: #F1F1F1;
   border-bottom-color: darkorange;

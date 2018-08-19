@@ -113,8 +113,6 @@ export default {
 ul {
   display: inline-flex;
 }
-li {
-}
 .nav > li > a {
   text-decoration: none;
   color: #747A8A;
