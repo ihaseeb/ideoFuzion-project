@@ -101,6 +101,6 @@ p {
   color: springgreen
 }
 .loss {
-  color: #985567
+  color: rgb(207, 60, 85)
 }
 </style>

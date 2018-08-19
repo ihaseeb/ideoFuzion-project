@@ -87,7 +87,8 @@ p {
 }
 .secondary-heading {
   color: #A8914E;
-  text-decoration: underline
+  text-decoration: underline;
+  cursor: pointer
 }
 .input-field-text {
   background-color: #4E5464;
@@ -109,7 +110,7 @@ p {
   background-color: #ACB5C6 !important;
   border-radius: 4px;
   height: 40px;
-  margin-top: 3.6px;
+  margin-top: 3.3px;
   margin-left: -30px;
   z-index: 0;
   box-shadow: none;

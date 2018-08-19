@@ -5,8 +5,16 @@ import App from './App'
 import router from './router'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+import VueDataTables from 'vue-data-tables'
+import lang from 'element-ui/lib/locale/lang/en'
+import locale from 'element-ui/lib/locale'
 
 Vue.use(Vuetify)
+Vue.use(ElementUI)
+Vue.use(VueDataTables)
+locale.use(lang)
 
 Vue.config.productionTip = false
 
