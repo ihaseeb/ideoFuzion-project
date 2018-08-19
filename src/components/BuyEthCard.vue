@@ -32,17 +32,17 @@
         <v-layout row wrap>
           <v-flex md12 class="mb-2">
             <p>Price</p>
-            <input type="text" :value="price" class="input-field">
+            <input type="text" :value="price" class="input-field-text" :class="windowWidth < 1450 ?'input-field' : 'input-field-responsive'">
             <v-btn small depressed disabled flat class="input-btn"><p>BTC</p></v-btn>
           </v-flex>
           <v-flex md12 class="mb-2">
             <p>Amount</p>
-            <input type="text" value="" class="input-field">
+            <input type="text" value="" class="input-field-text" :class="windowWidth < 1450 ?'input-field' : 'input-field-responsive'">
             <v-btn small depressed disabled flat class="input-btn"><p>BTC</p></v-btn>
           </v-flex>
           <v-flex md12>
             <p>Total</p>
-            <input type="text" value="" class="input-field">
+            <input type="text" value="" class="input-field-text" :class="windowWidth < 1450 ?'input-field' : 'input-field-responsive'">
             <v-btn small depressed disabled flat class="input-btn"><p>BTC</p></v-btn>
           </v-flex>
         </v-layout>
@@ -62,7 +62,7 @@
 </template>
 <script>
 export default {
-  props: ['bitCoins', 'lowestAsk', 'price', 'feeValue', 'mainHeading', 'secondaryHeading', 'total'],
+  props: ['windowWidth', 'bitCoins', 'lowestAsk', 'price', 'feeValue', 'mainHeading', 'secondaryHeading', 'total'],
   data () {
     return {
     }
@@ -89,15 +89,21 @@ p {
   color: #A8914E;
   text-decoration: underline
 }
-.input-field {
+.input-field-text {
   background-color: #4E5464;
   border: 1px solid #f1f1f1;
   border-radius: 4px;
-  width: 80%;
   height: 40px;
   text-align: right;
-  z-index: 2;
+  z-index: 1;
   position: relative;
+  padding-right: 15px;
+}
+.input-field {
+  width: 70%;
+}
+.input-field-responsive {
+  width: 80%;
 }
 .input-btn {
   background-color: #ACB5C6 !important;
@@ -105,7 +111,7 @@ p {
   height: 40px;
   margin-top: 3.6px;
   margin-left: -30px;
-  z-index: 1;
+  z-index: 0;
   box-shadow: none;
   text-align: right;
   color: #f1f1f1 !important

@@ -11,8 +11,9 @@
       </v-flex>
     </v-layout>
     <v-layout row wrap class="mt-4">
-      <v-flex md4 class="eth-cards" v-for="(card, i) in ethCards" :key="i" :class="i !== 2 && checkWidth ? 'eth-cards-special' : 'eth-cards-special-responsive'">
+      <v-flex  md4 sm12 xs12 class="eth-cards" v-for="(card, i) in ethCards" :key="i" :class="i !== 2 && checkWidth? 'eth-cards-special' : 'eth-cards-special-responsive'">
         <buy-eth-card
+          :windowWidth='windowWidth'
           :bitCoins='card.bitCoins'
           :lowestAsk='card.lowestAsk'
           :price='card.price'
@@ -96,10 +97,17 @@ export default {
 
 <style scoped>
 .eth-cards {
-  min-width: 240px !important;
+  /* min-width: 240px !important; */
   max-width: 410px !important;
+  /* margin-right: -35px; */
 }
 .eth-cards-special {
   margin-right: 20px
+}
+.eth-cards-special-responsive {
+  /* min-width: auto;
+  max-width: auto; */
+  /* margin-right: 10px; */
+  /* padding-right: 25px */
 }
 </style>
