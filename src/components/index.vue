@@ -26,7 +26,7 @@
     <v-layout row wrap class="mt-4">
       <v-flex md12>
         <v-card class="table-card">
-            <v-card-title class="table-card-title">Order Book</v-card-title>
+            <v-card-title class="table-card-title">ORDER BOOK</v-card-title>
           <v-layout row wrap>
             <v-flex md6>
               <order-book :titles='titlesLeft' :tableData='tableDataLeft'></order-book>
@@ -38,20 +38,41 @@
         </v-card>
       </v-flex>
     </v-layout>
-    <!-- <v-layout row wrap class="mt-4">
+    <v-layout row wrap class="mt-4">
       <v-flex md12>
-        <market-history></market-history>
+        <v-card class="table-card">
+          <v-card-title class="table-card-title">MARKET HISTORY</v-card-title>
+            <v-layout row wrap>
+              <v-flex md12>
+                <market-history :titles='marketTitles' :tableData='marketData'></market-history>
+              </v-flex>
+            </v-layout>
+          </v-card>
       </v-flex>
-    </v-layout> -->
+    </v-layout>
+    <v-layout row wrap class="mt-4">
+      <v-flex md12>
+        <v-card class="table-card">
+          <v-card-title class="table-card-title">MY OPEN ORDERS</v-card-title>
+          </v-card>
+      </v-flex>
+    </v-layout>
+    <v-layout row wrap class="mt-4">
+      <v-flex md12>
+        <v-card class="table-card">
+          <v-card-title class="table-card-title">MY ORDER HISTORY</v-card-title>
+          </v-card>
+      </v-flex>
+    </v-layout>
   </v-container>
 </template>
 
 <script>
-import CurrencyStatsItems from './CurrencyStatComponent.vue'
-import EmptyCard from './emptyCard.vue'
-import BuyEthCard from './BuyEthCard.vue'
-import OrderBook from './OrderBook.vue'
-import MarketHistory from './MarketHistory.vue'
+import CurrencyStatsItems from '@/components/MainBodyComponents/CurrencyStatComponent.vue'
+import EmptyCard from '@/components/MainBodyComponents/emptyCard.vue'
+import BuyEthCard from '@/components/MainBodyComponents/BuyEthCard.vue'
+import OrderBook from '@/components/MainBodyComponents/OrderBook.vue'
+import MarketHistory from '@/components/MainBodyComponents/MarketHistory.vue'
 export default {
   components: {
     CurrencyStatsItems,
@@ -62,6 +83,142 @@ export default {
   },
   data () {
     return {
+      marketTitles: [
+        {
+          label: 'DATE',
+          prop: 'date'
+        },
+        {
+          label: 'BUY/SELL',
+          prop: 'status'
+        },
+        {
+          label: 'BID/ ASK',
+          prop: 'buyAsk'
+        },
+        {
+          label: 'TOTAL UNITS(ADA)',
+          prop: 'totalUnit'
+        },
+        {
+          label: 'TOTAL COST(BTC)',
+          prop: 'totalCost'
+        }
+      ],
+      marketData: [
+        {
+          date: '14:55:47',
+          status: 'BUY',
+          bidAsk: '0.0002132',
+          totalUnit: '105.33341177',
+          totalCost: '0.00225743'
+        },
+        {
+          date: '14:55:47',
+          status: 'SELL',
+          bidAsk: '0.0002132',
+          totalUnit: '105.33341177',
+          totalCost: '0.00225743'
+        },
+        {
+          date: '14:55:47',
+          status: 'SELL',
+          bidAsk: '0.0002132',
+          totalUnit: '105.33341177',
+          totalCost: '0.00225743'
+        },
+        {
+          date: '14:55:47',
+          status: 'SELL',
+          bidAsk: '0.0002132',
+          totalUnit: '105.33341177',
+          totalCost: '0.00225743'
+        },
+        {
+          date: '14:55:47',
+          status: 'BUY',
+          bidAsk: '0.0002132',
+          totalUnit: '105.33341177',
+          totalCost: '0.00225743'
+        },
+        {
+          date: '14:55:47',
+          status: 'BUY',
+          bidAsk: '0.0002132',
+          totalUnit: '105.33341177',
+          totalCost: '0.00225743'
+        },
+        {
+          date: '14:55:47',
+          status: 'SELL',
+          bidAsk: '0.0002132',
+          totalUnit: '105.33341177',
+          totalCost: '0.00225743'
+        },
+        {
+          date: '14:55:47',
+          status: 'SELL',
+          bidAsk: '0.0002132',
+          totalUnit: '105.33341177',
+          totalCost: '0.00225743'
+        },
+        {
+          date: '14:55:47',
+          status: 'SELL',
+          bidAsk: '0.0002132',
+          totalUnit: '105.33341177',
+          totalCost: '0.00225743'
+        },
+        {
+          date: '14:55:47',
+          status: 'BUY',
+          bidAsk: '0.0002132',
+          totalUnit: '105.33341177',
+          totalCost: '0.00225743'
+        },
+        {
+          date: '14:55:47',
+          status: 'BUY',
+          bidAsk: '0.0002132',
+          totalUnit: '105.33341177',
+          totalCost: '0.00225743'
+        },
+        {
+          date: '14:55:47',
+          status: 'SELL',
+          bidAsk: '0.0002132',
+          totalUnit: '105.33341177',
+          totalCost: '0.00225743'
+        },
+        {
+          date: '14:55:47',
+          status: 'SELL',
+          bidAsk: '0.0002132',
+          totalUnit: '105.33341177',
+          totalCost: '0.00225743'
+        },
+        {
+          date: '14:55:47',
+          status: 'SELL',
+          bidAsk: '0.0002132',
+          totalUnit: '105.33341177',
+          totalCost: '0.00225743'
+        },
+        {
+          date: '14:55:47',
+          status: 'BUY',
+          bidAsk: '0.0002132',
+          totalUnit: '105.33341177',
+          totalCost: '0.00225743'
+        },
+        {
+          date: '14:55:47',
+          status: 'BUY',
+          bidAsk: '0.0002132',
+          totalUnit: '105.33341177',
+          totalCost: '0.00225743'
+        }
+      ],
       titlesRight: [
         {
           label: 'SUM',
@@ -379,18 +536,10 @@ export default {
 
 <style scoped>
 .eth-cards {
-  /* min-width: 240px !important; */
   max-width: 410px !important;
-  /* margin-right: -35px; */
 }
 .eth-cards-special {
   margin-right: 20px
-}
-.eth-cards-special-responsive {
-  /* min-width: auto;
-  max-width: auto; */
-  /* margin-right: 10px; */
-  /* padding-right: 25px */
 }
 .table-card {
   background-color: #424856

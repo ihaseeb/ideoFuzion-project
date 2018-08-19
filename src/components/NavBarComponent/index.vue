@@ -75,7 +75,6 @@ export default {
 }
 .navbar-nav {
   background-image: linear-gradient(90deg, #444A58, #2F353F);
-  /* box-shadow: none; */
 }
 .navbar-bottom {
   padding-top: 64px;

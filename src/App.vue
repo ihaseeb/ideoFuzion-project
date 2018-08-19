@@ -10,19 +10,20 @@
     <v-content :class="drawer? 'main-container' : 'main-container-responsive'">
       <router-view/>
     </v-content>
-    <v-footer :fixed="fixed" app :class="drawer? 'footer' : 'footer-responsive'">
-      <span>&copy; 2018</span>
-    </v-footer>
+    <!-- footer component -->
+    <footer-component :drawer='drawer'></footer-component>
   </v-app>
 </template>
 
 <script>
 import SidePanelComponent from '@/components/SidePanelComponent/index.vue'
 import NavBarComponent from '@/components/NavBarComponent/index.vue'
+import FooterComponent from '@/components/FooterComponent/index.vue'
 export default {
   components: {
     SidePanelComponent,
-    NavBarComponent
+    NavBarComponent,
+    FooterComponent
   },
   data () {
     return {
@@ -47,6 +48,7 @@ export default {
   background-image: linear-gradient(90deg, #444A58, #2F353F);
   padding-left: 200px !important;
   padding-top: 0px !important;
+  padding-bottom: 100px !important;
 }
 .main-container-responsive {
   background-image: linear-gradient(90deg, #444A58, #2F353F);
@@ -65,17 +67,5 @@ hr {
 }
 .navbar-bottom-responsive {
   background-image: linear-gradient(90deg, #444A58, #2F353F);
-}
-/* Footer CSS */
-.footer {
-  background-color: #3E4454;
-  color: white;
-  margin-left: 200px;
-  padding-left: 10px;
-}
-.footer-responsive {
-  background-color: #3E4454;
-  color: white;
-  padding-left: 10px;
 }
 </style>
